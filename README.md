@@ -23,3 +23,10 @@ JOIN dimensiontable ON facttable.airport_ident = dimensiontable.airport_ident;
 
 SELECT * FROM  combined_table;
 ```
+
+what is the average elevation of airports of each municipality
+```sql
+SELECT municipality, AVG(elevation_ft) AS average_elevation
+FROM combined_table
+GROUP BY municipality;
+```
